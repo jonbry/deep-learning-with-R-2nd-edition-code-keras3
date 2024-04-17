@@ -1,5 +1,5 @@
 ## ----setup, include = FALSE-----------------------------------------------
-library(keras)
+library(keras3)
 tensorflow::tf_function(function(x) x + 1)(1)
 
 
@@ -305,7 +305,7 @@ plot(history)
 
 
 ## -------------------------------------------------------------------------
-test_model <- load_model_tf("convnet_from_scratch_with_augmentation.keras")
+test_model <- load_model("convnet_from_scratch_with_augmentation.keras")
 result <- evaluate(test_model, test_dataset)
 cat(sprintf("Test accuracy: %.3f\n", result["accuracy"]))
 
@@ -446,7 +446,7 @@ history <- model %>% fit(
 
 
 ## -------------------------------------------------------------------------
-test_model <- load_model_tf(
+test_model <- load_model(
   "feature_extraction_with_data_augmentation.keras")
 result <- evaluate(test_model, test_dataset)
 cat(sprintf("Test accuracy: %.3f\n", result["accuracy"]))

@@ -1,5 +1,5 @@
 ## ----setup, include = FALSE-----------------------------------------------
-library(keras)
+library(keras3)
 tensorflow::tf_function(function(x) x + 1)(1)
 
 
@@ -10,7 +10,7 @@ dir_create(data_dir)
 
 
 ## ---- eval = FALSE--------------------------------------------------------
-## data_url <- path("http://www.robots.ox.ac.uk/~vgg/data/pets/data")
+## data_url <- path("https://thor.robots.ox.ac.uk/~vgg/data/pets")
 ## for (filename in c("images.tar.gz", "annotations.tar.gz")) {
 ##   download.file(url =  data_url / filename,
 ##                 destfile = data_dir / filename)
@@ -171,7 +171,7 @@ plot(history)
 
 
 ## -------------------------------------------------------------------------
-model <- load_model_tf("oxford_segmentation.keras")
+model <- load_model("oxford_segmentation.keras")
 
 
 ## -------------------------------------------------------------------------
@@ -234,7 +234,7 @@ residual_block <- function(x, filters, pooling = FALSE) {
   if (pooling) {
     x <- x %>% layer_max_pooling_2d(pool_size = 2, padding = "same")
     residual <- residual %>% layer_conv_2d(filters, 1, strides = 2)
-  } else if (filters != dim(residual)[4]) {
+  } else if (filters != residual$shape[[4]] { # original code returns length NULL
     residual <- residual %>% layer_conv_2d(filters, 1)
   }
 
@@ -368,7 +368,7 @@ plot(history)
 
 
 ## -------------------------------------------------------------------------
-model <- load_model_tf("convnet_from_scratch_with_augmentation.keras")
+model <- load_model("convnet_from_scratch_with_augmentation.keras")
 model
 
 
