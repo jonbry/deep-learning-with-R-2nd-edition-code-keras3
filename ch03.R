@@ -1,16 +1,16 @@
 ## ----setup, include = FALSE-----------------------------------------------
 library(tensorflow)
-library(keras)
+library(keras3)
 tf_function(function(x) x+1)(as_tensor(1))
 
 
 ## ---- eval = FALSE--------------------------------------------------------
-## install.packages("keras")
+## install.packages("keras3")
 ##
 ## library(reticulate)
 ## virtualenv_create("r-reticulate", python = install_python())
 ##
-## library(keras)
+## library(keras3)
 ## install_keras(envname = "r-reticulate")
 
 
@@ -422,15 +422,15 @@ model %>% compile(
 
 
 ## -------------------------------------------------------------------------
-ls(pattern = "^optimizer_", "package:keras")
+ls(pattern = "^optimizer_", "package:keras3")
 
 
 ## -------------------------------------------------------------------------
-ls(pattern = "^loss_", "package:keras")
+ls(pattern = "^loss_", "package:keras3")
 
 
 ## -------------------------------------------------------------------------
-ls(pattern = "^metric_", "package:keras")
+ls(pattern = "^metric_", "package:keras3")
 
 
 ## -------------------------------------------------------------------------
