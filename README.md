@@ -1,12 +1,5 @@
-## Deep Learning with R, 2nd Edition (Code Only)
+## Updated code for Deep Learning with R, Second Edition
 
-The repository contains just the code from the book "Deep Learning with R, 2nd Edition".
+The code for each chapter in the process of being updated to work with the `keras3` package. The book was writen using the `keras` package, which interfaces with the Keras 2. Most of the functions are going to be the same, but there are some slight differences (`load_model_tf()` is now `load_model()`). 
 
-You can install all the dependencies by cloning this repo and sourcing the `"install-r-tensorflow.R"` script, 
-either at the R console or the terminal:
-
-```bash
-Rscript install-r-tensorflow.R
-```
-
-Note: the install script assumes that R and CUDA drivers are already installed.
+You can find the official repository for Deep Learning with R, Second Edition [here](https://github.com/t-kalinowski/deep-learning-with-R-2nd-edition-code)
