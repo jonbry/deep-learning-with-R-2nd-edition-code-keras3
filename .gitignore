@@ -13,5 +13,8 @@ convnet_from_scratch.keras
 cats_vs_dogs_small
 dogs_vs_cats
 pets_dataset
+<<<<<<< HEAD
 convnet_from_scratch_with_augmentation.h5
 dogs-vs-cats/
+=======
+>>>>>>> bf5b4ae4958afbf243cb57c67947f3fd423a82a5
