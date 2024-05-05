@@ -1,10 +1,10 @@
 ## ----setup, include = FALSE-----------------------------------------------
-library(keras)
+library(keras3)
 tensorflow::tf_function(function(x) x + 1)(1)
 
 
 ## -------------------------------------------------------------------------
-library(keras)
+library(keras3)
 
 model <- keras_model_sequential() %>%
   layer_dense(64, activation = "relu") %>%
@@ -461,7 +461,7 @@ model %>% fit(
 
 
 ## -------------------------------------------------------------------------
-model <- load_model_tf("checkpoint_path.keras")
+model <- load_model"checkpoint_path.keras")
 
 
 ## ---- eval = FALSE--------------------------------------------------------
